@@ -52,10 +52,10 @@ export default function PersonalWebsiteStarter() {
 ];
 
   const focus = [
-  "Technology and startups",
-  "Investing and business",
-  "Learning and skill-building",
-  "Long-term personal growth",
+  "Technology",
+  "Management",
+  "Innovation",
+  "Startups",
 ];
 
   return (
@@ -157,22 +157,10 @@ export default function PersonalWebsiteStarter() {
                   <h3 className="mt-3 text-3xl font-semibold">What I’m interested in</h3>
                 </div>
                 <p className="max-w-2xl" style={{ color: palette.softRose, opacity: 0.72 }}>
-                  Over time, this can grow into a portfolio of projects, ideas, and experiences that show how I think and what I’m learning.
+                  These are the fields I’m most drawn to and the ones I want to keep exploring through future projects and experiences.
                 </p>
               </div>
             </Reveal>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-3">
-              {strengths.map((item, index) => (
-                <Reveal key={item.title} delay={index * 0.08}>
-                  <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.22 }} className="rounded-3xl border p-6" style={{ borderColor: palette.deepRed, backgroundColor: 'rgba(207, 15, 71, 0.10)' }}>
-                    <h4 className="text-xl font-semibold">{item.title}</h4>
-                    <p className="mt-3 leading-7" style={{ color: palette.softRose, opacity: 0.86 }}>{item.text}</p>
-                  </motion.div>
-                </Reveal>
-              ))}
-            </div>
-
             <Reveal delay={0.16}>
               <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.22 }} className="mt-10 rounded-3xl border p-6" style={{ borderColor: palette.deepRed, backgroundColor: 'rgba(207, 15, 71, 0.10)' }}>
                 <p className="text-sm uppercase tracking-[0.25em]" style={{ color: palette.softRose, opacity: 0.65 }}>Core Themes</p>
@@ -185,6 +173,17 @@ export default function PersonalWebsiteStarter() {
                 </div>
               </motion.div>
             </Reveal>
+
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {strengths.map((item, index) => (
+                <Reveal key={item.title} delay={index * 0.08}>
+                  <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.22 }} className="rounded-3xl border p-6" style={{ borderColor: palette.deepRed, backgroundColor: 'rgba(207, 15, 71, 0.10)' }}>
+                    <h4 className="text-xl font-semibold">{item.title}</h4>
+                    <p className="mt-3 leading-7" style={{ color: palette.softRose, opacity: 0.86 }}>{item.text}</p>
+                  </motion.div>
+                </Reveal>
+              ))}
+            </div>
           </section>
 
           <section id="projects" className="border-t py-16" style={{ borderColor: palette.deepRed }}>
